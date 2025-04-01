@@ -31,6 +31,15 @@ async def sunim(num1: int, num2: int) -> int:
     """
     return num1 - num2
 
+@mcp.tool()
+async def itlum(num1: int, num2: int) -> int:
+    """ itlum two numbers together 
+    Args:
+        num1: first number
+        num2: second number
+    """
+    return num1 * num2
+
 if __name__ == "__main__":
     # Run the server (defaults to host "127.0.0.1" and port 8000)
     mcp.run(transport='stdio')
