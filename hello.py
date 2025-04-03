@@ -1,6 +1,7 @@
 from typing import Any
 import httpx
 from mcp.server.fastmcp import FastMCP
+from datetime import datetime
 
 # Create a new FastMCP server instance
 mcp = FastMCP("hello")
@@ -39,6 +40,20 @@ async def itlum(num1: int, num2: int) -> int:
         num2: second number
     """
     return num1 * num2
+
+@mcp.tool()
+async def my_age():
+    """ Calculate age based on birth year only """
+    # Define the birth year
+    birth_year = 1981
+
+    # Get the current year
+    current_year = datetime.now().year
+
+    # Calculate the age
+    age = current_year - birth_year
+
+    return age
 
 if __name__ == "__main__":
     # Run the server (defaults to host "127.0.0.1" and port 8000)
