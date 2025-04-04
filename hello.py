@@ -42,18 +42,13 @@ async def itlum(num1: int, num2: int) -> int:
     return num1 * num2
 
 @mcp.tool()
-async def my_age():
-    """ Calculate age based on birth year only """
-    # Define the birth year
-    birth_year = 1981
-
-    # Get the current year
-    current_year = datetime.now().year
-
-    # Calculate the age
-    age = current_year - birth_year
-
-    return age
+async def is_weekend():
+    """ Check if today is a weekend """
+    # Get the current day of the week
+    current_day = datetime.now().weekday()
+    
+    # Check if the day is a weekend (Saturday or Sunday)
+    return current_day >= 5
 
 if __name__ == "__main__":
     # Run the server (defaults to host "127.0.0.1" and port 8000)
