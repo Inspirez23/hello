@@ -12,5 +12,9 @@ paragraph sentences
 
 <mark>this is a highlight to represent important</mark>
 
+```python
+// This is a code block
+x += 1
+```
 
 
