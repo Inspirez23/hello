@@ -68,6 +68,17 @@ async def fibonacci(n: int) -> int:
         a, b = b, a + b
     return b
 
+@mcp.tool()
+async def power(base: int, exponent: int) -> int:
+    """ Calculate base raised to the power of exponent
+    Args:
+        base: The base number
+        exponent: The power to raise the base to
+    Returns:
+        base raised to the power of exponent
+    """
+    return base ** exponent
+
 if __name__ == "__main__":
     # Run the server (defaults to host "127.0.0.1" and port 8000)
     mcp.run(transport='stdio')
